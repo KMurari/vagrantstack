@@ -16,7 +16,7 @@ then
 else
   echo "##########################################################################################################################"
   echo;
-  echo "A setuprc config file wasn't found & the install must halt.  Report this at https://github.com/bluechiptek/bluechipstack."
+  echo "A setuprc config file wasn't found & the install must halt.  Report this at https://github.com/rackerlabs/vagrantstack."
   echo;
   echo "##########################################################################################################################"
   exit;
