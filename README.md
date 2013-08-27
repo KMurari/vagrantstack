@@ -6,9 +6,9 @@ Before we drop into the guide, I'd like to thank [Blue Chip Tek](http://bluechip
 The scripts provided in this guide build a Chef server inside a [Vagrant box](http://vagrantup.com/), which ends up acting as a sort of 'raygun' to blast OpenStack onto the nodes.  Everyone knows [rayguns](https://www.google.com/search?q=raygun&safe=off) are awesome.
 
 ### Prerequisites for Install
-The new install scripts are [available for download](https://github.com/bluechiptek/bluechipstack) from BlueChip's Github account.  It is recommended you familiarize yourself first with the install process by watching the screencast below.
+The new install scripts are [available for download](https://github.com/rackerlabs/vagrantstack) from BlueChip's Github account.  It is recommended you familiarize yourself first with the install process by watching the screencast below.
 
-[![ScreenShot](https://raw.github.com/bluechiptek/bluechipstack/master/openstack_movie.png)](http://vimeo.com/73001135)
+[![ScreenShot](https://raw.github.com/rackerlabs/vagrantstack/master/openstack_movie.png)](http://vimeo.com/73001135)
 
 
 Before you start, make sure you have a minimum of one bare metal node running [Ubuntu Server 12.04](http://www.ubuntu.com/download/server).  If you are installing on more than one node, make sure all the nodes are on the [same private IP block](http://en.wikipedia.org/wiki/Private_network) and are able to talk to each other before proceeding.  All nodes will need Internet access via NAT provided by a DHCP server/router.
@@ -28,11 +28,11 @@ Start a terminal on your local machine and make sure you have *git* installed.  
     
 Next, clone the scripts from the repo:
 
-    git clone https://github.com/bluechiptek/bluechipstack.git
+    git clone https://github.com/rackerlabs/vagrantstack.git
     
 Now move into the scripts directory and take a gander at the scripts:
 
-    cd bluechipstack; ls
+    cd vagrantstack; ls
     
 ### Create the Setup File
 The setup script provided in the repository will prompt you for a few variables, including the number of nodes for the cluster, the node IPs and names, and the network you'll be using for instances.  Start the setup script by typing the following:
@@ -78,10 +78,10 @@ Once the Chef server is provisioned, ssh into it:
 
     vagrant ssh
 
-Once you are logged into the server, become root and change into the *bluechipstack* directory:
+Once you are logged into the server, become root and change into the *vagrantstack* directory:
 
     sudo su
-    cd /root/bluechipstack
+    cd /root/vagrantstack
     
 Now run the install script to print out the node configuration commands:
 
