@@ -13,7 +13,7 @@ git clone https://github.com/rackerlabs/vagrantstack.git /root/vagrantstack/;
 cp /vagrant/setuprc /root/vagrantstack/;
 
 # install chef server and the rackspace cookbooks
-cat /root/rackerlabs/openstack_chef_server.sh | bash;
+cat /root/vagrantstack/openstack_chef_server.sh | bash;
 curl -s -L https://raw.github.com/rcbops/support-tools/master/chef-install/install-cookbooks.sh | bash;
 
 # generate a key for pushing to nodes
