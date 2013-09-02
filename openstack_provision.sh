@@ -10,7 +10,7 @@ apt-get -y install curl;
 
 # checkout scripts again to the chef server and copy config file over 
 git clone https://github.com/rackerlabs/vagrantstack.git /root/vagrantstack/;
-cp /vagrant/setuprc /root/bluechipstack/;
+cp /vagrant/setuprc /root/vagrantstack/;
 
 # install chef server and the rackspace cookbooks
 cat /root/rackerlabs/openstack_chef_server.sh | bash;
